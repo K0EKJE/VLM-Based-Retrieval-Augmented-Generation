@@ -1,0 +1,3 @@
+colpali-engine[train]>=0.3.0,<0.4.0
+huggingface_hub
+vidore_benchmark
