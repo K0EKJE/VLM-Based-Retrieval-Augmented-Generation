@@ -1,0 +1,15 @@
+torch
+pdf2image
+opencv-python
+numpy
+Pillow
+transformers
+matplotlib
+colpali-engine
+datasets
+faiss-cpu
+vidore_benchmark
+easyocr
+openai
+protobuf
+chromadb
