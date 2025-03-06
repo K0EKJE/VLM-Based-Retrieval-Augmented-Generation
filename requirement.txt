@@ -1,3 +1,16 @@
 colpali-engine[train]>=0.3.0,<0.4.0
 huggingface_hub
 vidore_benchmark
+torch
+pdf2image
+opencv-python
+numpy
+Pillow
+transformers
+matplotlib
+datasets
+faiss-cpu
+easyocr
+openai
+protobuf
+chromadb
