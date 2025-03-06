@@ -39,8 +39,8 @@ def evaluate_multiple_datasets(model_name, dataset_names, vidore_evaluator, base
         # Evaluate dataset
         metrics_dataset = vidore_evaluator.evaluate_dataset(
             ds=ds_test,
-            batch_query=1,
-            batch_passage=1,
+            batch_query=4,
+            batch_passage=4,
             batch_score=4
         )
 
