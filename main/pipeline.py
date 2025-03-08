@@ -17,7 +17,7 @@ from dbManager import (
 from gen import QAGenerator
 
 
-def retrieve(embedder, queries, data_dic, embeddings, top_n=3):
+def retrieve_image(embedder, queries, data_dic, embeddings, top_n=3):
     query_embeddings = []
     for query in queries:
         query_embeddings.append(embedder.get_embedding(query, mod="text")[0].cpu())
@@ -36,6 +36,30 @@ def retrieve(embedder, queries, data_dic, embeddings, top_n=3):
             tmp.append(data_dic['images'][i])
         img = stitch_images_vertically(tmp)
         results.append(img)
+
+    # print(results)
+    return results
+
+
+def retrieve_ocr_text(embedder, queries, data_dic, embeddings, top_n=3):
+    query_embeddings = []
+    for query in queries:
+        query_embeddings.append(embedder.get_embedding(query, mod="text")[0].cpu())
+
+    sim_mat = np.zeros((len(query_embeddings), len(embeddings)))
+    for i in range(len(query_embeddings)):
+        for j in range(len(embeddings)):
+            sim_mat[i, j] = compute_similarity_score(query_embeddings[i], embeddings[j])
+
+    max_indices = np.argsort(sim_mat, axis=1)[:, -top_n:]
+    # print("Top 3 indices of maximum similarity values per row:", max_indices)
+    results = []
+    for idx in max_indices:
+        tmp = []
+        for i in idx:
+            tmp.append(data_dic['texts'][i])
+        text = '\n'.join(tmp)
+        results.append(text)
 
     # print(results)
     return results
@@ -74,13 +98,13 @@ if __name__ == '__main__':
 
     n = 0
     acc = 0
-    for key in tqdm(list(dataset.keys())[:10]):
+    for key in tqdm(list(dataset.keys())[:100]):
         n += 1
         query = dataset[key]["question"]
         option = dataset[key]["options"]
         answer = dataset[key]["correct_answer"]
 
-        results = retrieve(
+        image_results = retrieve_image(
             embedder=embedder,
             queries=[query],
             data_dic=data_dic,
@@ -88,11 +112,19 @@ if __name__ == '__main__':
             top_n=3
         )
 
+        text_results = retrieve_ocr_text(
+            embedder=embedder,
+            queries=[query],
+            data_dic=data_dic,
+            embeddings=text_embeddings,
+            top_n=3
+        )
+
         response = QAGenerator.response(
             query=query,
-            image=results[0],
+            image=image_results[0],
             options=option,
-            # ocr_content=ocr_content,
+            # ocr_content=text_results[0],
         )
         if len(answer) == 1 and answer in response:
             acc += 1
