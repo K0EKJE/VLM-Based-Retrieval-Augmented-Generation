@@ -24,7 +24,6 @@ class ModelInterpreter:
         """
         self.device = self.get_torch_device(device)
         self.model = model
-
         self.processor = processor
 
     @staticmethod
@@ -70,9 +69,9 @@ class ModelInterpreter:
             query_embeddings = self.model.forward(**batch_queries).to(self.device)
 
         # Compute patches and mask
-        n_patches = self.processor.get_n_patches(image_size=image.size, patch_size=self.model.patch_size)
+        n_patches = self.processor.get_n_patches(image_size=image.size, patch_size=self.model.patch_size, spatial_merge_size=self.model.spatial_merge_size)
         image_mask = self.processor.get_image_mask(batch_images)
-
+        # for the example, n_patches is (20,28), (# of patches in width, # of patches in height)
         # Generate similarity maps
         batched_similarity_maps = get_similarity_maps_from_embeddings(
             image_embeddings=image_embeddings,
@@ -93,8 +92,9 @@ class ModelInterpreter:
             query_tokens=query_tokens,
             similarity_maps=similarity_maps,
         )
-        plots.savefig(f"../interpretable_output.png")
-        return plots, query_tokens
+        for (fig, ax), token in zip(plots, query_tokens):
+            fig.savefig(f"../interpreted_example/token{token}.png")
+
 
     def save_similarity_maps(self, image_path: str, query: str, save_prefix: str = "similarity_map"):
         """
@@ -126,7 +126,7 @@ if __name__ == "__main__":
     # model = ColQwen2.from_pretrained(
     #         model_name,
     #         torch_dtype=torch.bfloat16).eval()
-
+    # model.to("cuda")
     # # Load the processor
     # processor = ColQwen2Processor.from_pretrained(model_name)
 
