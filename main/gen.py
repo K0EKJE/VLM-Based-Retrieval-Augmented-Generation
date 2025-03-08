@@ -80,8 +80,82 @@ class QAGenerator:
         image.save(buffered, format="JPEG")
         return base64.b64encode(buffered.getvalue()).decode("utf-8")
 
+    def expand_query(self, query):
+        expansion_prompt = (
+            f"Given the user query: '{query}', generate a more detailed or rephrased version of it "
+            "to improve the quality of question answering. The output should be a natural language query."
+        )
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "user", "content": [{"type": "text", "text": expansion_prompt}]}
+                ],
+            )
+            expanded_query = response.choices[0].message.content.strip()
+            return expanded_query
+        except Exception as e:
+            print(f"Query expansion failed: {e}")
+            return query
+
+    def check_image_relevance(self, query, image):
+        base64_image = self.encode_image(image)
+
+        check_prompt = (
+            f"The user has asked the following query: '{query}'.\n"
+            "You have been provided with an image. Analyze whether this image is useful for answering the query.\n"
+            "Additionally, determine whether more images are needed to provide a complete answer.\n"
+            "Your response should be in JSON format as follows:\n"
+            "{\n"
+            '    "need_additional_image": "yes" or "no",\n'
+            '    "reason": "Explain why the given image is sufficient or not.",\n'
+            '    "additional images description": "If additional images are needed, describe what kind of images are required. Otherwise, leave this empty."\n'
+            "}"
+        )
+
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {
+                        "role": "user",
+                        "content": [
+                            {"type": "text", "text": check_prompt},
+                            {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}}
+                        ],
+                    }
+                ],
+            )
+            result = response.choices[0].message.content.strip().replace("```json", "").replace("```", "")
+
+            try:
+                result_json = json.loads(result)
+                return result_json
+            except json.JSONDecodeError:
+                print(f"Failed to parse response JSON: {result}")
+                return {
+                    "need_additional_image": "no",
+                    "reason": "Unable to determine, defaulting to 'no'.",
+                    "additional images description": ""
+                }
+        except Exception as e:
+            print(f"Image relevance check failed: {e}")
+            return {
+                "need_additional_image": "no",
+                "reason": "An error occurred while processing the image.",
+                "additional images description": ""
+            }
+
     def response(self, query, image=None, options=None, ocr_content=None):
-        prompt = f"{query}\n"
+        # query = self.expand_query(query)
+
+        cot_prompt = (
+            "Think step by step before answering. If it's a multiple-choice question, "
+            "analyze each option before selecting the correct answer."
+        )
+
+        prompt = f"{query}\n\n{cot_prompt}\n"
+
         if options:
             prompt += f"{options}\n\nplease only give an option letter"
         if ocr_content:
