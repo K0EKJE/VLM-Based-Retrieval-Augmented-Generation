@@ -118,8 +118,8 @@ def create_model(model_type="qwen"):
     #     return model, processor
 
     if model_type == "colSmol":
-        model_name = "vidore/colSmol-256M"
-        cache_dir = "./models/colSmol-256M"
+        model_name = "vidore/colSmol-500M"
+        cache_dir = "./models/colSmol-500M"
 
         model = ColIdefics3.from_pretrained(
             model_name,
