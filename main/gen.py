@@ -3,12 +3,12 @@ import io
 import json
 from openai import OpenAI
 from tqdm import tqdm
-from preprocessor import PDFToImageConverter
+from preprocessor import PDFToImageConverter, ImageOCR
 from datasets import load_dataset
 
 
 class ImageQuestionGenerator:
-    def __init__(self, client, pdf_path, output_file="./image_question.json", dpi=200, model="gpt-4o-mini"):
+    def __init__(self, client, pdf_path, output_file="./data/image_question.json", dpi=200, model="gpt-4o-mini"):
         self.pdf_path = pdf_path
         self.output_file = output_file
         self.converter = PDFToImageConverter(dpi=dpi)
@@ -85,7 +85,7 @@ class QAGenerator:
         if options:
             prompt += f"{options}\n\nplease only give an option letter"
         if ocr_content:
-            prompt += f"\n\nYou can answer the question based on the following content:\n{ocr_content}\n"
+            prompt += f"\n\nYou should answer the question based on the following content:\n{ocr_content}\n"
         if image:
             # print("use image")
             base64_image = self.encode_image(image)
@@ -121,9 +121,10 @@ if __name__ == '__main__':
     client = OpenAI()
     # generator = ImageQuestionGenerator(
     #     client=client,
-    #     pdf_path="/Users/hanboyu/Desktop/winter2025/cs224n/RAGSystem/data/dmv.pdf"
+    #     pdf_path="/Users/hanboyu/Desktop/winter2025/cs224n/RAGSystem/data/dmv.pdf",
+    #     output_file="./data/image_question_1.json"
     # )
-    # generator.generate_questions(max_pages=2)
+    # generator.generate_questions(max_pages=90)
 
     dataset = load_dataset('parquet',
                            data_files='/Users/hanboyu/Desktop/winter2025/cs224n/RAGSystem/data/vidore/arxivqa_test_subsampled/test-00000-of-00001.parquet')
@@ -132,24 +133,28 @@ if __name__ == '__main__':
     queries = dataset['train']['query']
     options = dataset['train']['options']
     answers = dataset['train']['answer']
-    # images[0].show()
+    images[0].show()
     # print(queries[0])
     # print(options[0])
     # print(answers[0])
-    # QAGenerator = QAGenerator(client=client, model="gpt-4o-mini")
-    #
-    # acc = 0
-    # n = 2
-    # for i in tqdm(range(n)):
-    #     response = QAGenerator.response(
-    #         query=queries[i],
-    #         image=images[i],
-    #         options=options[i]
-    #     )
-    #     if len(answers[i]) == 1 and answers[i] in response:
-    #         acc += 1
-    #     else:
-    #         if len(response) == 1 and response in answers[i]:
-    #             acc += 1
-    # acc = acc / n * 100
-    # print(f"Accuracy: {acc:.2f}%")
+
+    QAGenerator = QAGenerator(client=client, model="gpt-4o-mini")
+    ocr = ImageOCR(lang='eng')
+
+    acc = 0
+    n = 2
+    for i in tqdm(range(n)):
+        ocr_content = ocr.extract_text(images[i])
+        response = QAGenerator.response(
+            query=queries[i],
+            # image=images[i],
+            options=options[i],
+            ocr_content=ocr_content,
+        )
+        if len(answers[i]) == 1 and answers[i] in response:
+            acc += 1
+        else:
+            if len(response) == 1 and response in answers[i]:
+                acc += 1
+    acc = acc / n * 100
+    print(f"Accuracy: {acc:.2f}%")

@@ -1,0 +1,992 @@
+{
+    "1": {
+        "question": "What is the primary purpose of the document shown in the image?",
+        "options": [
+            "A. To provide information about California's tourist attractions",
+            "B. To serve as a guideline for drivers in California",
+            "C. To list traffic laws in all states",
+            "D. To explain the history of California's highway system"
+        ],
+        "correct_answer": "B",
+        "page": 1
+    },
+    "2": {
+        "question": "What online services are mentioned for the California DMV in the image?",
+        "options": [
+            "Renew driver's license and vehicle registration",
+            "Schedule a driving test",
+            "Apply for a new vehicle title",
+            "Get car insurance quotes"
+        ],
+        "correct_answer": "A",
+        "page": 2
+    },
+    "3": {
+        "question": "What has been the trend in traffic deaths and serious injuries for pedestrians in California since 2010?",
+        "options": [
+            "A: A decrease of over 50%",
+            "B: A significant increase",
+            "C: No change at all",
+            "D: A slight decrease"
+        ],
+        "correct_answer": "B",
+        "page": 3
+    },
+    "4": {
+        "question": "What is explicitly prohibited by the copyright notice in the handbook?",
+        "options": [
+            "A. Making a summary of the handbook",
+            "B. Giving the handbook to a friend",
+            "C. Printing copies of the handbook",
+            "D. Reading the handbook privately"
+        ],
+        "correct_answer": "C",
+        "page": 4
+    },
+    "5": {
+        "question": "What is the main topic of the Table of Contents presented?",
+        "options": [
+            "A. Motorcycle Regulations",
+            "B. California Driver's License and Related Information",
+            "C. Vehicle Maintenance Tips",
+            "D. Traffic Signal Operations"
+        ],
+        "correct_answer": "B",
+        "page": 5
+    },
+    "6": {
+        "question": "What is the phone number to call for DMV services?",
+        "options": [
+            "A: 1-800-777-0133",
+            "B: 1-800-368-4327",
+            "C: 1-800-555-0199",
+            "D: 1-800-123-4567"
+        ],
+        "correct_answer": "A",
+        "page": 6
+    },
+    "7": {
+        "question": "What type of driver's license is primarily needed for driving noncommercial vehicles in California?",
+        "options": [
+            "A. Class A",
+            "B. Class C",
+            "C. Class B",
+            "D. Class D"
+        ],
+        "correct_answer": "B",
+        "page": 7
+    },
+    "8": {
+        "question": "What is one requirement that must be fulfilled when applying for an instruction permit in California?",
+        "options": [
+            "Provide proof of employment",
+            "Complete a Driver’s License & ID Card Application",
+            "Obtain a sponsor's approval",
+            "Present a health certificate"
+        ],
+        "correct_answer": "B",
+        "page": 8
+    },
+    "9": {
+        "question": "What is the minimum age requirement for an individual to apply for a driver's license if they are under 18 years old?",
+        "options": [
+            "A: 15 years old",
+            "B: 16 years old",
+            "C: 18 years old",
+            "D: 21 years old"
+        ],
+        "correct_answer": "B",
+        "page": 9
+    },
+    "10": {
+        "question": "What time frame is a provisional driver under 18 not allowed to drive during the first 12 months of holding their license?",
+        "options": [
+            "A) 6 p.m. to 10 p.m.",
+            "B) 7 a.m. to 11 a.m.",
+            "C) 11 p.m. to 5 a.m.",
+            "D) 9 p.m. to 12 a.m."
+        ],
+        "correct_answer": "C",
+        "page": 10
+    },
+    "11": {
+        "question": "What is one condition under which a driver may need to take a behind-the-wheel test upon renewal of their license?",
+        "options": [
+            "A. If they have lost their license",
+            "B. If they are over the age of 70",
+            "C. If they have a vision or medical condition",
+            "D. If they have failed the knowledge test"
+        ],
+        "correct_answer": "C",
+        "page": 11
+    },
+    "12": {
+        "question": "What must be demonstrated regarding the vehicle’s windshield during the drive test?",
+        "options": [
+            "A: It must have a full, unblocked view for the driver.",
+            "B: It must be tinted to reduce glare.",
+            "C: It must have no cracks of any size.",
+            "D: It must be equipped with windshield wipers."
+        ],
+        "correct_answer": "A",
+        "page": 12
+    },
+    "13": {
+        "question": "What is prohibited during the behind-the-wheel drive test?",
+        "options": [
+            "A. Use of backup cameras",
+            "B. Use of advanced driver assistance systems",
+            "C. Accompanying by a service animal",
+            "D. Pre-drive inspection with an interpreter"
+        ],
+        "correct_answer": "B",
+        "page": 13
+    },
+    "14": {
+        "question": "What must you do if you legally change your name in relation to your driver's license?",
+        "options": [
+            "A. Notify the DMV by mail only",
+            "B. Visit the DMV website for updates",
+            "C. Automatically receive a new driver's license",
+            "D. Discard the old driver's license without action"
+        ],
+        "correct_answer": "B",
+        "page": 14
+    },
+    "15": {
+        "question": "What are the recommended hand positions for the hand-to-hand steering method?",
+        "options": [
+            "A: 10 and 2 o'clock",
+            "B: 9 and 3 o'clock or 8 and 4 o'clock",
+            "C: 12 and 6 o'clock",
+            "D: 7 and 5 o'clock"
+        ],
+        "correct_answer": "B",
+        "page": 15
+    },
+    "16": {
+        "question": "What is the correct hand position for the hand-over-hand steering method?",
+        "options": [
+            "A: 10 and 2 o'clock",
+            "B: 9 and 3 o'clock",
+            "C: 8 and 4 o'clock",
+            "D: 12 o'clock"
+        ],
+        "correct_answer": "C",
+        "page": 16
+    },
+    "17": {
+        "question": "How far in advance should you signal before making a turn?",
+        "options": [
+            "A: At least 50 feet",
+            "B: At least 100 feet",
+            "C: At least 200 feet",
+            "D: At least 300 feet"
+        ],
+        "correct_answer": "B",
+        "page": 17
+    },
+    "18": {
+        "question": "What should you do if your vehicle has no emergency flashers and you need to warn other drivers?",
+        "options": [
+            "A) Use your horn repeatedly.",
+            "B) Turn on your headlights.",
+            "C) Use your turn signals.",
+            "D) Exit your vehicle and wave your arms."
+        ],
+        "correct_answer": "C",
+        "page": 18
+    },
+    "19": {
+        "question": "What does a double solid yellow line indicate on a roadway?",
+        "options": [
+            "A. You may pass another vehicle if it is safe.",
+            "B. You must stay to the right of the line and cannot pass.",
+            "C. You can make a U-turn at any time.",
+            "D. You can change lanes freely."
+        ],
+        "correct_answer": "B",
+        "page": 19
+    },
+    "20": {
+        "question": "What does a double solid white line indicate?",
+        "options": [
+            "A lane barrier between regular and preferential lanes",
+            "A lane change area",
+            "An end of lane marking",
+            "An exit sign"
+        ],
+        "correct_answer": "A",
+        "page": 20
+    },
+    "21": {
+        "question": "What is the recommended use for the Number 1 Lane according to the text?",
+        "options": [
+            "A) To frequently change lanes",
+            "B) To pass or turn left",
+            "C) To exit traffic",
+            "D) To park vehicles"
+        ],
+        "correct_answer": "B",
+        "page": 21
+    },
+    "22": {
+        "question": "What should a driver do when using a center left turn lane to make a left turn?",
+        "options": [
+            "A. Drive in the center lane until the turn is safe and then turn.",
+            "B. Merge back into the regular traffic lane immediately after signaling.",
+            "C. Look for other vehicles, signal, and check blind spots before turning.",
+            "D. Only use the center left turn lane if there are no vehicles behind."
+        ],
+        "correct_answer": "C",
+        "page": 22
+    },
+    "23": {
+        "question": "What is a key characteristic of a buffered bike lane?",
+        "options": [
+            "A. It is marked by a dashed line.",
+            "B. It uses chevrons or diagonal markings.",
+            "C. It is only for pedestrians.",
+            "D. It allows parking at all times."
+        ],
+        "correct_answer": "B",
+        "page": 23
+    },
+    "24": {
+        "question": "What should you do before making a right turn regarding signaling?",
+        "options": [
+            "A. Signal about 200 feet before the turn",
+            "B. Signal only after checking for pedestrians",
+            "C. Start signaling about 100 feet before the turn",
+            "D. You do not need to signal for a right turn"
+        ],
+        "correct_answer": "C",
+        "page": 24
+    },
+    "25": {
+        "question": "What should you do before making a left turn according to the guidelines?",
+        "options": [
+            "A. Check your right side mirror for oncoming traffic.",
+            "B. Stop behind the limit line or before the crosswalk.",
+            "C. Turn your steering wheel once you reach the intersection.",
+            "D. Signal only if there are vehicles behind you."
+        ],
+        "correct_answer": "B",
+        "page": 25
+    },
+    "26": {
+        "question": "Under what condition may you make a U-turn on a divided highway?",
+        "options": [
+            "A. When there are no vehicles approaching within 200 feet",
+            "B. When the center divider has an opening",
+            "C. When a No U-turn sign is posted",
+            "D. When making a left turn against a red light"
+        ],
+        "correct_answer": "B",
+        "page": 26
+    },
+    "27": {
+        "question": "What is the correct lane to start a left turn from a two-way street according to the image?",
+        "options": [
+            "A. Far-right lane",
+            "B. Middle lane",
+            "C. Right lane closest to the curb",
+            "D. Left lane closest to the middle of the street"
+        ],
+        "correct_answer": "D",
+        "page": 27
+    },
+    "28": {
+        "question": "In the instructions for turning from one-way streets, which lane should you start when making a right turn?",
+        "options": [
+            "A. Far-left lane",
+            "B. Center lane",
+            "C. Far-right lane",
+            "D. Any lane available"
+        ],
+        "correct_answer": "C",
+        "page": 28
+    },
+    "29": {
+        "question": "What should you do before merging into highway traffic?",
+        "options": [
+            "A) Stop completely before merging",
+            "B) Ensure you are in the proper lane and at or near the speed of traffic",
+            "C) Signal only if other drivers can see you",
+            "D) Check your phone for directions"
+        ],
+        "correct_answer": "B",
+        "page": 29
+    },
+    "30": {
+        "question": "What is the recommended distance to leave when entering traffic on city streets?",
+        "options": [
+            "A: 50 feet",
+            "B: 150 feet",
+            "C: 300 feet",
+            "D: 450 feet"
+        ],
+        "correct_answer": "B",
+        "page": 30
+    },
+    "31": {
+        "question": "What should you do before driving into the passing lane on an open highway?",
+        "options": [
+            "A. Speed up to pass the vehicle immediately.",
+            "B. Signal that you plan on passing.",
+            "C. Turn on your hazard lights.",
+            "D. Check your fuel level."
+        ],
+        "correct_answer": "B",
+        "page": 31
+    },
+    "32": {
+        "question": "What is the first step in parallel parking according to the instructions?",
+        "options": [
+            "A. Pull up alongside the vehicle in front of the space",
+            "B. Check your blind spots",
+            "C. Find a space at least three feet longer than your vehicle",
+            "D. Turn off your vehicle and set the parking brake"
+        ],
+        "correct_answer": "C",
+        "page": 32
+    },
+    "33": {
+        "question": "What should you do before backing up in a straight line?",
+        "options": [
+            "A. Check your blind spots",
+            "B. Begin backing up immediately",
+            "C. Turn off your turn signal",
+            "D. Adjust your rearview mirror"
+        ],
+        "correct_answer": "A",
+        "page": 33
+    },
+    "34": {
+        "question": "What does the blue curb indicate for parking?",
+        "options": [
+            "A. Parking for a specific time limit",
+            "B. No stopping, standing, or parking",
+            "C. Parking for a disabled person or vehicle",
+            "D. Loading and unloading passengers only"
+        ],
+        "correct_answer": "C",
+        "page": 34
+    },
+    "35": {
+        "question": "What should you do if you are stopped by law enforcement during a traffic stop?",
+        "options": [
+            "A. Turn off your radio.",
+            "B. Leave the vehicle immediately.",
+            "C. Argue your case loudly.",
+            "D. Drive away slowly."
+        ],
+        "correct_answer": "A",
+        "page": 35
+    },
+    "36": {
+        "question": "What must a driver present when stopped by law enforcement?",
+        "options": [
+            "A driver's license, proof of insurance, and vehicle registration",
+            "A passport and social security number",
+            "A birth certificate and utility bill",
+            "Any form of ID available"
+        ],
+        "correct_answer": "A",
+        "page": 36
+    },
+    "37": {
+        "question": "What should you do if you are recording a police interaction and the officer requests you to stop recording?",
+        "options": [
+            "A. Comply immediately without question",
+            "B. Explain your First Amendment rights to the officer",
+            "C. Start deleting the recording on the spot",
+            "D. Engage in physical resistance against the officer"
+        ],
+        "correct_answer": "B",
+        "page": 37
+    },
+    "38": {
+        "question": "What services can you complete at DMV kiosks according to the image?",
+        "options": [
+            "File a tax return",
+            "Obtain your driver’s record and vehicle record",
+            "Enroll in a driving school",
+            "Get a parking permit"
+        ],
+        "correct_answer": "B",
+        "page": 38
+    },
+    "39": {
+        "question": "What does a solid red traffic light indicate?",
+        "options": [
+            "A. Proceed with caution",
+            "B. Turn left immediately",
+            "C. Stop and wait for the green light",
+            "D. Yield to oncoming traffic"
+        ],
+        "correct_answer": "C",
+        "page": 39
+    },
+    "40": {
+        "question": "What does a flashing yellow light indicate?",
+        "options": [
+            "A. Proceed with caution and do not need to stop",
+            "B. Stop completely before proceeding",
+            "C. Proceed only when the light turns green",
+            "D. Make a protected turn in any direction"
+        ],
+        "correct_answer": "A",
+        "page": 40
+    },
+    "41": {
+        "question": "What action is indicated by the 'Flashing DON’T WALK' signal?",
+        "options": [
+            "A. You may cross the street.",
+            "B. You must start crossing the street.",
+            "C. Do not start crossing the street.",
+            "D. You may continue walking."
+        ],
+        "correct_answer": "C",
+        "page": 41
+    },
+    "42": {
+        "question": "What does the sign that says 'NO PARKING ANY TIME' indicate?",
+        "options": [
+            "A: Parking is allowed only during specific hours.",
+            "B: Parking is prohibited at all times.",
+            "C: Parking is allowed for emergency vehicles only.",
+            "D: Parking is allowed on weekends."
+        ],
+        "correct_answer": "B",
+        "page": 42
+    },
+    "43": {
+        "question": "Which of the following signs indicates a pedestrian crossing?",
+        "options": [
+            "A. Traffic Signal Ahead",
+            "B. Slippery When Wet",
+            "C. Pedestrian Crossing",
+            "D. Yield Ahead"
+        ],
+        "correct_answer": "C",
+        "page": 43
+    },
+    "44": {
+        "question": "What shape is associated with signs that warn you of specific road conditions and dangers ahead?",
+        "options": [
+            "A: Circular",
+            "B: 5-sided",
+            "C: Diamond-shaped",
+            "D: Rectangular"
+        ],
+        "correct_answer": "C",
+        "page": 44
+    },
+    "45": {
+        "question": "At an intersection without STOP or YIELD signs, who has the right-of-way?",
+        "options": [
+            "The vehicle that arrived last",
+            "The vehicle that arrives first",
+            "The largest vehicle",
+            "The vehicle making a left turn"
+        ],
+        "correct_answer": "B",
+        "page": 45
+    },
+    "46": {
+        "question": "Which vehicle is shown making a left turn in the roundabout?",
+        "options": [
+            "A. Yellow car",
+            "B. Red car",
+            "C. Blue car",
+            "D. Green car"
+        ],
+        "correct_answer": "C",
+        "page": 46
+    },
+    "47": {
+        "question": "Which of the following is NOT considered a pedestrian under the provided guidelines?",
+        "options": [
+            "A person walking",
+            "A person using a skateboard",
+            "A person riding a bicycle",
+            "A person using an electric wheelchair"
+        ],
+        "correct_answer": "C",
+        "page": 47
+    },
+    "48": {
+        "question": "What should a driver do when they encounter a pedestrian using a white cane or guide dog in a crosswalk?",
+        "options": [
+            "A) Stop in the middle of the crosswalk.",
+            "B) Honk the horn to alert the pedestrian.",
+            "C) Yield to the pedestrian and proceed cautiously.",
+            "D) Speed up to pass the pedestrian quickly."
+        ],
+        "correct_answer": "C",
+        "page": 48
+    },
+    "49": {
+        "question": "What is the maximum speed allowed when passing a stopped bus, streetcar, or trolley at a safety zone?",
+        "options": [
+            "5 mph",
+            "10 mph",
+            "15 mph",
+            "20 mph"
+        ],
+        "correct_answer": "B",
+        "page": 49
+    },
+    "50": {
+        "question": "Under what condition is it permissible to overtake a light rail vehicle on the left side?",
+        "options": [
+            "A. When the light rail vehicle is moving.",
+            "B. When passing is allowed by a traffic officer.",
+            "C. When you are on a two-way street.",
+            "D. When the vehicle behind you signals to pass."
+        ],
+        "correct_answer": "B",
+        "page": 50
+    },
+    "51": {
+        "question": "What should you do when you see an emergency vehicle with flashing lights?",
+        "options": [
+            "A: Speed up and drive past the emergency vehicle.",
+            "B: Move over and slow down.",
+            "C: Stop in the intersection.",
+            "D: Follow closely behind the emergency vehicle."
+        ],
+        "correct_answer": "B",
+        "page": 51
+    },
+    "52": {
+        "question": "What is the maximum speed limit for Neighborhood Electric Vehicles (NEVs) and Low-speed Vehicles (LSVs)?",
+        "options": [
+            "15 mph",
+            "20 mph",
+            "25 mph",
+            "30 mph"
+        ],
+        "correct_answer": "C",
+        "page": 52
+    },
+    "53": {
+        "question": "What should a bicyclist do before making a left turn?",
+        "options": [
+            "A. Signal their turn using hand signals",
+            "B. Weave between parked vehicles",
+            "C. Ride on the sidewalk",
+            "D. Always stop before turning"
+        ],
+        "correct_answer": "A",
+        "page": 53
+    },
+    "54": {
+        "question": "What is the recommended distance a vehicle should maintain when passing a bicyclist if changing lanes is not possible?",
+        "options": [
+            "At least one foot",
+            "At least three feet",
+            "At least five feet",
+            "At least two feet"
+        ],
+        "correct_answer": "B",
+        "page": 54
+    },
+    "55": {
+        "question": "What action should drivers take when approaching a work zone?",
+        "options": [
+            "Increase speed to pass quickly",
+            "Avoid distractions while in the zone",
+            "Turn off headlights",
+            "Keep a close distance to the vehicle in front"
+        ],
+        "correct_answer": "B",
+        "page": 55
+    },
+    "56": {
+        "question": "What is the speed limit within 500 feet of a school while children are outside?",
+        "options": [
+            "15 mph",
+            "25 mph",
+            "30 mph",
+            "35 mph"
+        ],
+        "correct_answer": "B",
+        "page": 56
+    },
+    "57": {
+        "question": "What is the speed limit at a blind intersection if the view is blocked?",
+        "options": [
+            "10 mph",
+            "15 mph",
+            "20 mph",
+            "25 mph"
+        ],
+        "correct_answer": "B",
+        "page": 57
+    },
+    "58": {
+        "question": "What is the penalty for dumping or abandoning animals on a highway?",
+        "options": [
+            "A. A fine of up to $1,000",
+            "B. Revocation of driver's license",
+            "C. Community service for six months",
+            "D. Mandatory vehicle inspection"
+        ],
+        "correct_answer": "A",
+        "page": 58
+    },
+    "59": {
+        "question": "Which of the following is NOT mentioned as a location where objects can be affixed on a vehicle?",
+        "options": [
+            "A. Lower corner of the driver's side window",
+            "B. Center uppermost portion of the windshield",
+            "C. Front windshield or side rear windows",
+            "D. Lower corner of the rear window"
+        ],
+        "correct_answer": "C",
+        "page": 59
+    },
+    "60": {
+        "question": "What is the consequence of accumulating 8 points on your driver's record within 36 months?",
+        "options": [
+            "A: You will receive a warning only.",
+            "B: Your driving privilege may be suspended.",
+            "C: You will be eligible for a reduced fine.",
+            "D: You must attend an advanced driving course."
+        ],
+        "correct_answer": "B",
+        "page": 60
+    },
+    "61": {
+        "question": "What is the consequence for a minor with three at-fault collisions within a year?",
+        "options": [
+            "A. License will be permanently revoked",
+            "B. Driving privilege will be suspended for six months",
+            "C. License will be suspended for one year",
+            "D. No actions will be taken against the license"
+        ],
+        "correct_answer": "B",
+        "page": 61
+    },
+    "62": {
+        "question": "What must you do if you want to question a document prepared by someone listed as evidence?",
+        "options": [
+            "A. It is your responsibility to acquire a subpoena.",
+            "B. You must testify in person.",
+            "C. Request the DMV to provide the document again.",
+            "D. Have your attorney review it for you."
+        ],
+        "correct_answer": "A",
+        "page": 62
+    },
+    "63": {
+        "question": "What color represents the area behind you according to the image?",
+        "options": [
+            "A: Green",
+            "B: Blue",
+            "C: Yellow",
+            "D: Red"
+        ],
+        "correct_answer": "D",
+        "page": 63
+    },
+    "64": {
+        "question": "What should you do before changing lanes?",
+        "options": [
+            "A: Signal your intention",
+            "B: Check your blind spots",
+            "C: Adjust your mirrors",
+            "D: Accelerate quickly"
+        ],
+        "correct_answer": "B",
+        "page": 64
+    },
+    "65": {
+        "question": "What should you do when another vehicle's high-beam headlights are too bright?",
+        "options": [
+            "A: Look directly into the oncoming headlights",
+            "B: Use your high-beam headlights as well",
+            "C: Look toward the right edge of your lane",
+            "D: Increase your speed to pass quickly"
+        ],
+        "correct_answer": "C",
+        "page": 65
+    },
+    "66": {
+        "question": "What should a driver avoid doing in order to prevent skidding on slippery surfaces?",
+        "options": [
+            "A: Turning sharply at intersections",
+            "B: Driving at a constant speed",
+            "C: Using the brakes aggressively",
+            "D: Maintaining a safe distance from other vehicles"
+        ],
+        "correct_answer": "A",
+        "page": 66
+    },
+    "67": {
+        "question": "What should you do if your brakes sink to the floor when pressed?",
+        "options": [
+            "A: Release the brake pedal and avoid braking.",
+            "B: Quickly pump the brakes while applying pressure.",
+            "C: Pump the brakes gently until you stop the vehicle.",
+            "D: Shift your vehicle into a lower gear and use the emergency brake."
+        ],
+        "correct_answer": "B",
+        "page": 67
+    },
+    "68": {
+        "question": "What should you do if you hear sloshing sounds from your tires while driving in wet conditions?",
+        "options": [
+            "A. Accelerate to maintain speed.",
+            "B. Steer directly into the standing water.",
+            "C. Slow down.",
+            "D. Change lanes immediately."
+        ],
+        "correct_answer": "C",
+        "page": 68
+    },
+    "69": {
+        "question": "What should you do after driving through a flooded road?",
+        "options": [
+            "A. Turn on your headlights.",
+            "B. Test your brakes to ensure they work correctly.",
+            "C. Accelerate to gain speed.",
+            "D. Avoid looking at the water levels."
+        ],
+        "correct_answer": "B",
+        "page": 69
+    },
+    "70": {
+        "question": "What should you do if driving in heavy fog?",
+        "options": [
+            "A: Use high-beam headlights to improve visibility.",
+            "B: Increase your following distance.",
+            "C: Drive at higher speeds to clear the fog quicker.",
+            "D: Turn off your windshield wipers."
+        ],
+        "correct_answer": "B",
+        "page": 70
+    },
+    "71": {
+        "question": "What is the primary purpose of wearing a seat belt as described in the image?",
+        "options": [
+            "A. To enhance vehicle speed",
+            "B. To increase chance of survival in collisions",
+            "C. To ensure comfort during travel",
+            "D. To protect the vehicle's interior"
+        ],
+        "correct_answer": "B",
+        "page": 71
+    },
+    "72": {
+        "question": "What age and height must a child meet to be secured in a rear-facing child passenger restraint system?",
+        "options": [
+            "A: Under 2 years old, under 40 pounds, and under 3 feet 4 inches tall",
+            "B: Under 5 years old, under 50 pounds, and under 4 feet tall",
+            "C: Under 6 years old, under 40 pounds, and under 3 feet tall",
+            "D: Under 8 years old, under 60 pounds, and under 4 feet 5 inches tall"
+        ],
+        "correct_answer": "A",
+        "page": 72
+    },
+    "73": {
+        "question": "According to the text, what is the minimum age for a person to supervise a child left unattended in a vehicle?",
+        "options": [
+            "A. 10 years old",
+            "B. 12 years old",
+            "C. 16 years old",
+            "D. 18 years old"
+        ],
+        "correct_answer": "B",
+        "page": 73
+    },
+    "74": {
+        "question": "What should you do first if your wheels drift off the pavement?",
+        "options": [
+            "A. Brake hard to stop immediately.",
+            "B. Grip the steering wheel firmly.",
+            "C. Accelerate to return to the road quickly.",
+            "D. Look for a safe place to pull over."
+        ],
+        "correct_answer": "B",
+        "page": 74
+    },
+    "75": {
+        "question": "What should you do first if your vehicle becomes disabled on the freeway?",
+        "options": [
+            "A. Dial 911 immediately",
+            "B. Safely pull over to the right shoulder",
+            "C. Exit the vehicle immediately",
+            "D. Turn on your air conditioner"
+        ],
+        "correct_answer": "B",
+        "page": 75
+    },
+    "76": {
+        "question": "What should you do if your vehicle is on a railroad track and you see an approaching train with warning lights flashing?",
+        "options": [
+            "A: Wait in your vehicle until the train passes.",
+            "B: Call your insurance company for assistance.",
+            "C: Immediately exit your vehicle and run away diagonally from the tracks.",
+            "D: Attempt to move your vehicle off the tracks."
+        ],
+        "correct_answer": "C",
+        "page": 76
+    },
+    "77": {
+        "question": "What is one of the symptoms of carbon monoxide poisoning mentioned in the text?",
+        "options": [
+            "A. Increased heart rate",
+            "B. Tiredness",
+            "C. Hiccups",
+            "D. Euphoria"
+        ],
+        "correct_answer": "B",
+        "page": 77
+    },
+    "78": {
+        "question": "What is a requirement for carrying alcohol or cannabis products in a vehicle according to the text?",
+        "options": [
+            "A: The container must be empty.",
+            "B: The container must be sealed and unopened.",
+            "C: It can be stored in the glove box.",
+            "D: It can be consumed while driving."
+        ],
+        "correct_answer": "B",
+        "page": 78
+    },
+    "79": {
+        "question": "What is the legal BAC limit for a person over 21 years old while driving?",
+        "options": [
+            "0.01%",
+            "0.04%",
+            "0.08%",
+            "0.12%"
+        ],
+        "correct_answer": "C",
+        "page": 79
+    },
+    "80": {
+        "question": "What may happen if a law enforcement officer suspects you of DUI in California?",
+        "options": [
+            "A: You will automatically lose your vehicle.",
+            "B: You are required to take a blood or urine test.",
+            "C: Your driving privilege may be suspended.",
+            "D: You will receive a permanent license without restrictions."
+        ],
+        "correct_answer": "C",
+        "page": 80
+    },
+    "81": {
+        "question": "What is the minimum Blood Alcohol Concentration (BAC) that can lead to a DUI conviction for drivers under 21?",
+        "options": [
+            "A. 0.01%",
+            "B. 0.05%",
+            "C. 0.08%",
+            "D. 0.10%"
+        ],
+        "correct_answer": "A",
+        "page": 81
+    },
+    "82": {
+        "question": "What is the minimum insurance coverage required for property damage according to the document?",
+        "options": [
+            "$15,000",
+            "$30,000",
+            "$5,000",
+            "$10,000"
+        ],
+        "correct_answer": "C",
+        "page": 82
+    },
+    "83": {
+        "question": "What should you do first if you are in a collision and someone is hurt?",
+        "options": [
+            "Call your insurance agent",
+            "Move your vehicle out of traffic if safe",
+            "Leave the scene immediately",
+            "Take photos of the accident"
+        ],
+        "correct_answer": "B",
+        "page": 83
+    },
+    "84": {
+        "question": "What is the timeframe within which a collision must be reported to the DMV if it results in more than $1,000 in damage?",
+        "options": [
+            "A. 5 days",
+            "B. 10 days",
+            "C. 30 days",
+            "D. 1 month"
+        ],
+        "correct_answer": "B",
+        "page": 84
+    },
+    "85": {
+        "question": "What is the required action when selling a vehicle in California?",
+        "options": [
+            "A. Notify DMV within ten days",
+            "B. Complete a Notice of Transfer within five days",
+            "C. Register the vehicle within twenty days",
+            "D. Pay a registration fee immediately"
+        ],
+        "correct_answer": "B",
+        "page": 85
+    },
+    "86": {
+        "question": "What can be a basis for DMV to reexamine a driver's ability to operate a motor vehicle safely?",
+        "options": [
+            "A. A driver's age",
+            "B. A poor driver's record",
+            "C. Driving in different weather conditions",
+            "D. The type of vehicle being driven"
+        ],
+        "correct_answer": "B",
+        "page": 86
+    },
+    "87": {
+        "question": "What must a driver do if they receive a Notice of Priority Reexamination? ",
+        "options": [
+            "A. Contact the DMV within five working days.",
+            "B. Ignore the notice if they believe they are capable of driving.",
+            "C. Provide an immediate medical certificate.",
+            "D. Submit their driver's license for revocation."
+        ],
+        "correct_answer": "A",
+        "page": 87
+    },
+    "88": {
+        "question": "What is one of the warning signs of an unsafe driver listed in the document?",
+        "options": [
+            "Frequent long-distance trips",
+            "Getting lost in familiar places",
+            "Driving only during peak hours",
+            "Always using the freeway"
+        ],
+        "correct_answer": "B",
+        "page": 88
+    },
+    "89": {
+        "question": "What age must a driver be to qualify for a no-fee Senior ID card?",
+        "options": [
+            "A) 55 years old",
+            "B) 60 years old",
+            "C) 62 years old",
+            "D) 65 years old"
+        ],
+        "correct_answer": "C",
+        "page": 89
+    },
+    "90": {
+        "question": "What does the acronym DPE stand for in the context of driving assessments?",
+        "options": [
+            "A: Driving performance evaluation",
+            "B: Daily performance exam",
+            "C: Designated passenger evaluation",
+            "D: Driver proficiency examination"
+        ],
+        "correct_answer": "A",
+        "page": 90
+    }
+}
