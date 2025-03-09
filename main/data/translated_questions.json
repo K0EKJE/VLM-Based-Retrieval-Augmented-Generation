@@ -279,16 +279,6 @@
         ],
         "correct_answer": "B"
     },
-    "29": {
-        "question": "As shown in the picture, this sign means:",
-        "options": [
-            "A. One-way traffic must keep to the right",
-            "B. Bicycle lane must keep to the right",
-            "C. All vehicles must turn right ahead",
-            "D. All vehicles must turn left ahead"
-        ],
-        "correct_answer": "A"
-    },
     "30": {
         "question": "How should one respond when encountering heavy fog or sandstorm weather?",
         "options": [
@@ -309,16 +299,6 @@
         ],
         "correct_answer": "A"
     },
-    "32": {
-        "question": "As shown in the picture, this sign means:",
-        "options": [
-            "A. The separated lanes will merge ahead",
-            "B. The current lane will separate ahead",
-            "C. There is an obstacle on the road ahead",
-            "D. There is a traffic light on the road ahead"
-        ],
-        "correct_answer": "A"
-    },
     "33": {
         "question": "You are on a section of road with two lanes in the direction you are moving, and you are currently in the left lane; at this moment, there is a car behind you driving very fast and closely following you. What should you do for safety?",
         "options": [
@@ -336,16 +316,6 @@
             "B. Used to separate the flow of traffic traveling in opposite directions on a two-way lane.",
             "C. Used to separate regular lanes from carpool lanes (lanes for vehicles with multiple passengers).",
             "D. Used to separate bicycle lanes from motor vehicle lanes."
-        ],
-        "correct_answer": "B"
-    },
-    "35": {
-        "question": "You are on a lane intended for a left turn, and you see the sign in the picture. What should you do?",
-        "options": [
-            "A. You can only turn left when the green light is on.",
-            "B. Even if the green light is on, you must yield to other traffic or pedestrians and confirm safety before turning.",
-            "C. You cannot turn left when the green light is on.",
-            "D. You cannot turn right when the green light is on."
         ],
         "correct_answer": "B"
     },
@@ -478,16 +448,6 @@
             "D. 30 mph"
         ],
         "correct_answer": "C"
-    },
-    "49": {
-        "question": "As shown in the picture, two vehicles A and B almost arrive at an intersection without traffic lights at the same time. Who should go first?",
-        "options": [
-            "A. Vehicle A goes first",
-            "B. Vehicle B goes first",
-            "C. The vehicle that signals first goes first.",
-            "D. The vehicle that is turning goes first."
-        ],
-        "correct_answer": "B"
     },
     "50": {
         "question": "What is the widely recognized best practice for improving urban traffic conditions?",
@@ -839,16 +799,6 @@
         ],
         "correct_answer": "A"
     },
-    "85": {
-        "question": "As shown in the picture, the similar orange sign means:",
-        "options": [
-            "A. There is road construction ahead.",
-            "B. The road ahead is closed.",
-            "C. There is a toll station ahead.",
-            "D. There has been a traffic accident ahead, prepare to detour."
-        ],
-        "correct_answer": "A"
-    },
     "86": {
         "question": "Why should drivers try to look far ahead while driving?",
         "options": [
@@ -969,16 +919,7 @@
         ],
         "correct_answer": "C"
     },
-    "98": {
-        "question": "What does this sign indicate?",
-        "options": [
-            "A. No parking here.",
-            "B. Overtake when safe.",
-            "C. Overtaking is prohibited in all circumstances.",
-            "D. Access is prohibited in this area."
-        ],
-        "correct_answer": "C"
-    },
+
     "99": {
         "question": "You arrive at an intersection with a stop sign, and upon looking left and right, you find that there are obstacles like buildings or bushes blocking your view. At this time, you should:",
         "options": [
@@ -1149,16 +1090,6 @@
         ],
         "correct_answer": "C"
     },
-    "116": {
-        "question": "As shown in the picture, if you see the traffic light like this when you are about to turn; which of the following descriptions is correct?",
-        "options": [
-            "A. All vehicles and pedestrians at the intersection must yield to you.",
-            "B. The vehicles and pedestrians opposite you see a red light at this time.",
-            "C. You cannot turn at this time.",
-            "D. The traffic light has malfunctioned."
-        ],
-        "correct_answer": "B"
-    },
     "117": {
         "question": "When you are backing out of a diagonal parking space, you should slow down while:",
         "options": [
@@ -1178,16 +1109,6 @@
             "D. In the center of the intersection."
         ],
         "correct_answer": "B"
-    },
-    "119": {
-        "question": "As shown in the picture, this symbol indicates:",
-        "options": [
-            "A. A place to park wheelchairs.",
-            "B. A place to park bicycles.",
-            "C. Parking for disabled persons holding a valid permit.",
-            "D. A place to park motorcycles."
-        ],
-        "correct_answer": "C"
     },
     "120": {
         "question": "When you arrive at an intersection and find the red traffic light flashing continuously, what does it mean?",
@@ -1246,16 +1167,6 @@
             "B. Continue at your current speed, as any accident will be the other party's full responsibility.",
             "C. Immediately reduce speed or even stop to avoid an accident.",
             "D. Immediately switch to another vehicle to avoid this unskilled driver."
-        ],
-        "correct_answer": "C"
-    },
-    "126": {
-        "question": "What do these two signs mean as shown in the picture?",
-        "options": [
-            "A. U-turns are prohibited at this intersection.",
-            "B. Only right turns are allowed at this intersection.",
-            "C. Left turns are only allowed when the green left turn arrow is illuminated.",
-            "D. Any pedestrians crossing this intersection will be fined."
         ],
         "correct_answer": "C"
     },
@@ -1369,16 +1280,6 @@
         ],
         "correct_answer": "B"
     },
-    "138": {
-        "question": "As shown in the figure, this shape of the orange sign indicates:",
-        "options": [
-            "A. Vehicles with this sign have priority.",
-            "B. Vehicles with this sign are slow-moving.",
-            "C. There is a dangerous situation ahead.",
-            "D. There is construction ahead."
-        ],
-        "correct_answer": "B"
-    },
     "139": {
         "question": "In which of the following situations must you report to the police and submit a written report to the Department of Motor Vehicles (DMV):",
         "options": [
@@ -1428,26 +1329,6 @@
             "D. California State Legislature"
         ],
         "correct_answer": "C"
-    },
-    "144": {
-        "question": "As shown in the picture, you are preparing to make a left turn in this lane, while both sides of the middle lane are marked with solid lines; in this situation, can your vehicle enter the middle lane?",
-        "options": [
-            "A. Yes, and you can only use the middle lane to complete the turn.",
-            "B. No, the middle lane can only be used for right turns.",
-            "C. No, the middle lane is reserved for emergency vehicles.",
-            "D. No, because you cannot cross solid lines under any circumstances."
-        ],
-        "correct_answer": "A"
-    },
-    "145": {
-        "question": "As shown in the picture, this sign indicates:",
-        "options": [
-            "A. It reminds drivers that a left turn will occur ahead.",
-            "B. Left turns are prohibited ahead.",
-            "C. There is a rest area on the left side of the road ahead.",
-            "D. The left side of the road ahead is an exit for the highway."
-        ],
-        "correct_answer": "A"
     },
     "146": {
         "question": "Why do large trucks usually maintain a greater distance from the vehicle in front while driving?",
@@ -2988,46 +2869,6 @@
             "D. Not using GPS & changing lanes randomly"
         ],
         "correct_answer": "B"
-    },
-    "300": {
-        "question": "This shape of the sign indicates:",
-        "options": [
-            "A. You must turn left or make a U-turn to the left",
-            "B. There is a fork on the left side",
-            "C. You can turn left or make a U-turn when the left turn arrow at the intersection is lit",
-            "D. Left turns or U-turns are prohibited"
-        ],
-        "correct_answer": "C"
-    },
-    "301": {
-        "question": "What does this sign indicate?",
-        "options": [
-            "A. One-way street, traffic flows to the right.",
-            "B. No right turn.",
-            "C. All vehicles must turn right.",
-            "D. Sharp turn ahead to the right, please slow down."
-        ],
-        "correct_answer": "A"
-    },
-    "302": {
-        "question": "What does this sign indicate?",
-        "options": [
-            "A. You can only turn left when the light is green.",
-            "B. You can turn left when the light is green, but you must yield to other vehicles.",
-            "C. Turning left is prohibited when the light is green.",
-            "D. You are about to enter a roundabout after turning left."
-        ],
-        "correct_answer": "B"
-    },
-    "303": {
-        "question": "This sign indicates:",
-        "options": [
-            "A. Overtaking is prohibited during the day.",
-            "B. Overtaking is prohibited at night.",
-            "C. Overtaking is prohibited under any circumstances.",
-            "D. Overtaking is prohibited unless it can be done safely."
-        ],
-        "correct_answer": "C"
     },
     "304": {
         "question": "Since the legalization of recreational marijuana in California on January 1, 2018, it has also become legal to smoke marijuana while driving. Is this statement true?",
