@@ -9,7 +9,7 @@ options.add_argument("--headless")
 options.add_argument("--disable-blink-features=AutomationControlled")
 driver = webdriver.Chrome(options=options)
 
-TOTAL_QUESTIONS = 1
+TOTAL_QUESTIONS = 305
 
 base_url = "https://pass-dmv-test.com/quiz-{}-zh"
 

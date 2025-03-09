@@ -1,4 +1,5 @@
 import numpy as np
+import torch
 from datasets import load_dataset
 from openai import OpenAI
 import json
@@ -21,6 +22,10 @@ def retrieve_image(embedder, queries, data_dic, embeddings, top_n=3):
     query_embeddings = []
     for query in queries:
         query_embeddings.append(embedder.get_embedding(query, mod="text")[0].cpu())
+
+    if len(query_embeddings) > 1:
+        avg_embedding = torch.mean(torch.stack(query_embeddings), dim=0)
+        query_embeddings = [avg_embedding]
 
     sim_mat = np.zeros((len(query_embeddings), len(embeddings)))
     for i in range(len(query_embeddings)):
@@ -45,6 +50,10 @@ def retrieve_ocr_text(embedder, queries, data_dic, embeddings, top_n=3):
     query_embeddings = []
     for query in queries:
         query_embeddings.append(embedder.get_embedding(query, mod="text")[0].cpu())
+
+    if len(query_embeddings) > 1:
+        avg_embedding = torch.mean(torch.stack(query_embeddings), dim=0)
+        query_embeddings = [avg_embedding]
 
     sim_mat = np.zeros((len(query_embeddings), len(embeddings)))
     for i in range(len(query_embeddings)):
@@ -73,11 +82,11 @@ def load_json_dataset(file_path):
 
 if __name__ == '__main__':
     data_file = "/Users/hanboyu/Desktop/winter2025/cs224n/RAGSystem/data/dmv.pdf"
-    json_data_file = "./data/image_question_0.json"
+    json_data_file = "./data/translated_questions.json"
 
-    model, processor = create_model(model_type="colSmol")
+    model, processor = create_model(model_type="qwen")
     embedder = ImageTextEmbedder(model, processor)
-    n_data = 10
+    # n_data = 10
 
     output_file = f'../db/{data_file.split("/")[-2]}.pickle'
     filetype = data_file.split(".")[-1].strip()
@@ -98,11 +107,13 @@ if __name__ == '__main__':
 
     n = 0
     acc = 0
-    for key in tqdm(list(dataset.keys())[:100]):
+    for key in tqdm(list(dataset.keys())):
         n += 1
         query = dataset[key]["question"]
         option = dataset[key]["options"]
         answer = dataset[key]["correct_answer"]
+
+        # queries = QAGenerator.expand_query(query)
 
         image_results = retrieve_image(
             embedder=embedder,
@@ -122,7 +133,7 @@ if __name__ == '__main__':
 
         response = QAGenerator.response(
             query=query,
-            image=image_results[0],
+            # image=image_results[0],
             options=option,
             # ocr_content=text_results[0],
         )
