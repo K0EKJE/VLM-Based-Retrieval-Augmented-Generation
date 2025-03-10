@@ -5,9 +5,15 @@ Stanford NLP Project Repo
 VLM RAG pipeline based on [CoPali](https://arxiv.org/pdf/2407.01449).
 
 ## Interpretable MaxSim Mapping:
-<div style="display: flex; justify-content: center;">
-    <img src="interpreted_output/interpretable_output_token_Ġshould.png" style="width:200px;height:220px; margin-right: 10px;">
-    <img src="interpreted_output/interpretable_output_token__questionmark.png" style="width:200px;height:220px;">
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+    <div style="text-align: center;">
+        <p><strong>Max MaxSim-Score Token: driving</strong></p>
+        <img src="interpreted_output_new/interpretable_output_token_Ġdriving.png" style="width:350px;height:320px;">
+    </div>
+    <div style="text-align: center;">
+        <p><strong>Max MaxSim-Score Token: What</strong></p>
+        <img src="interpreted_output_new/interpretable_output_token_What.png" style="width:350px;height:320px;">
+    </div>
 </div>
 
 ## Project Structure Tree:
