@@ -57,7 +57,7 @@ class ViDoReBenchmarkEvaluator:
         # Save metrics
         save_metrics(metrics_dataset, self.model_name, dataset_name, base_dir)
 
-    def evaluate_multiple_datasets(self, dataset_names: list, base_dir: str = "../benchmark_run_metrics"):
+    def evaluate_multiple_datasets(self, dataset_names: list, base_dir: str = "../benchmark_run_metrics_FT"):
         """
         Evaluates multiple datasets.
 
@@ -70,15 +70,17 @@ class ViDoReBenchmarkEvaluator:
 
 # Usage
 if __name__ == "__main__":
-    model_name = "vidore/colSmol-500M"
+    
+    model_name = '../checkpoints/model'
     processor = ColIdefics3Processor.from_pretrained(model_name)
     model = ColIdefics3.from_pretrained(
         model_name,
         torch_dtype=torch.bfloat16,
         device_map="cuda",
     ).eval()
-
+    model_name = "vidore/colSmol-500M-FT"
     evaluator = ViDoReBenchmarkEvaluator(model, processor, model_name)
 
     dataset_names = ["vidore/docvqa_test_subsampled","vidore/tatdqa_test", 'vidore/tabfquad_test_subsampled','vidore/infovqa_test_subsampled','vidore/arxivqa_test_subsampled']
+
     evaluator.evaluate_multiple_datasets(dataset_names)
