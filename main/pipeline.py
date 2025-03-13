@@ -1,9 +1,11 @@
 import numpy as np
 import torch
+from anyio.lowlevel import checkpoint
 from datasets import load_dataset
 from openai import OpenAI
 import json
 from tqdm import tqdm
+
 from preprocessor import PDFToImageConverter, ImageOCR
 from preprocessor import (
     create_model,
@@ -84,7 +86,11 @@ if __name__ == '__main__':
     data_file = "/Users/hanboyu/Desktop/winter2025/cs224n/RAGSystem/data/dmv.pdf"
     json_data_file = "./data/translated_questions.json"
 
-    model, processor = create_model(model_type="qwen")
+    checkpoint_model = "/Users/hanboyu/Desktop/winter2025/cs224n/RAGSystem/code/main/models/trained_models_checkpoint/model-1.5epoch"
+
+    # model, processor = create_model(model_type="qwen")
+    model, processor = create_model(model_type="colSmol", checkpoint_model=checkpoint_model)
+    print(model)
     embedder = ImageTextEmbedder(model, processor)
     # n_data = 10
 
@@ -135,7 +141,7 @@ if __name__ == '__main__':
             query=query,
             # image=image_results[0],
             options=option,
-            # ocr_content=text_results[0],
+            ocr_content=text_results[0],
         )
         if len(answer) == 1 and answer in response:
             acc += 1

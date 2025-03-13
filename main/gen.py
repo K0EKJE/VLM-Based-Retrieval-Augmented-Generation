@@ -237,24 +237,24 @@ if __name__ == '__main__':
     # print(answers[0])
 
     QAGenerator = QAGenerator(client=client, model="gpt-4o-mini")
-    expanded_query = QAGenerator.expand_query(queries[0])
-    print(expanded_query)
-    # ocr = ImageOCR(lang='eng')
-    #
-    # acc = 0
-    # n = 2
-    # for i in tqdm(range(n)):
-    #     ocr_content = ocr.extract_text(images[i])
-    #     response = QAGenerator.response(
-    #         query=queries[i],
-    #         # image=images[i],
-    #         options=options[i],
-    #         ocr_content=ocr_content,
-    #     )
-    #     if len(answers[i]) == 1 and answers[i] in response:
-    #         acc += 1
-    #     else:
-    #         if len(response) == 1 and response in answers[i]:
-    #             acc += 1
-    # acc = acc / n * 100
-    # print(f"Accuracy: {acc:.2f}%")
+    # expanded_query = QAGenerator.expand_query(queries[0])
+    # print(expanded_query)
+    ocr = ImageOCR(lang='eng')
+
+    acc = 0
+    n = 2
+    for i in tqdm(range(n)):
+        ocr_content = ocr.extract_text(images[i])
+        response = QAGenerator.response(
+            query=queries[i],
+            # image=images[i],
+            options=options[i],
+            ocr_content=ocr_content,
+        )
+        if len(answers[i]) == 1 and answers[i] in response:
+            acc += 1
+        else:
+            if len(response) == 1 and response in answers[i]:
+                acc += 1
+    acc = acc / n * 100
+    print(f"Accuracy: {acc:.2f}%")
