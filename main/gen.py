@@ -82,8 +82,31 @@ class QAGenerator:
 
     def expand_query(self, query):
         expansion_prompt = (
-            f"Given the user query: '{query}', generate a more detailed or rephrased version of it "
-            "to improve the quality of question answering. The output should be a natural language query."
+            f"""
+            You are an AI assistant that helps improve document retrieval by expanding queries.
+
+            Given an input query: {query}, generate five semantically similar queries that rephrase the original question while maintaining its intent. The expanded queries should include variations in wording, synonyms, and domain-specific terminology to maximize recall during retrieval.
+            
+            Return the output in **JSON format** with the key `"queries"` containing a list of five expanded queries.
+            
+            ### Example:
+            **Input Query:** "What are the requirements for getting a driver's license?"  
+            **Output:**
+            """
+            +
+            """
+            ```json
+            {
+              "queries": [
+                "What documents do I need to apply for a driver's license?",
+                "What are the age and identification criteria for obtaining a driver's license?",
+                "How can I qualify for a driver's license?",
+                "What are the necessary steps to apply for a driver's license?",
+                "What is required to be eligible for a driver's license?"
+              ]
+            }
+            ```
+            """
         )
         try:
             response = self.client.chat.completions.create(
@@ -92,7 +115,8 @@ class QAGenerator:
                     {"role": "user", "content": [{"type": "text", "text": expansion_prompt}]}
                 ],
             )
-            expanded_query = response.choices[0].message.content.strip()
+            expanded_query = response.choices[0].message.content.strip().replace("```json", "").replace("```", "")
+            expanded_query = json.loads(expanded_query)
             return expanded_query
         except Exception as e:
             print(f"Query expansion failed: {e}")
@@ -207,12 +231,14 @@ if __name__ == '__main__':
     queries = dataset['train']['query']
     options = dataset['train']['options']
     answers = dataset['train']['answer']
-    images[0].show()
+    # images[0].show()
     # print(queries[0])
     # print(options[0])
     # print(answers[0])
 
     QAGenerator = QAGenerator(client=client, model="gpt-4o-mini")
+    # expanded_query = QAGenerator.expand_query(queries[0])
+    # print(expanded_query)
     ocr = ImageOCR(lang='eng')
 
     acc = 0

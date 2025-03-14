@@ -78,7 +78,7 @@ class ImageTextEmbedder:
         return features
 
 
-def create_model(model_type="qwen"):
+def create_model(model_type="qwen", checkpoint_model=None, checkpoint_path=None):
     if torch.cuda.is_available():
         device = "cuda:0"
     elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
@@ -87,21 +87,42 @@ def create_model(model_type="qwen"):
         device = "cpu"
 
     if model_type == "qwen":
-        model_name = "vidore/colqwen2-v1.0"
-        cache_dir = "./models/colqwen2-v1.0"
+        if checkpoint_model:
+            model = ColQwen2.from_pretrained(
+                checkpoint_model,
+                torch_dtype=torch.bfloat16,
+                device_map=device,
+                attn_implementation="flash_attention_2" if is_flash_attn_2_available() else None,
+            ).eval()
 
-        # model_name = "tsystems/colqwen2-2b-v1.0"
-        # cache_dir = "./models/colqwen2-2b-v1.0"
+            processor = ColQwen2Processor.from_pretrained(checkpoint_model)
 
-        model = ColQwen2.from_pretrained(
-            model_name,
-            cache_dir=cache_dir,
-            torch_dtype=torch.bfloat16,
-            device_map=device,
-            attn_implementation="flash_attention_2" if is_flash_attn_2_available() else None,
-        ).eval()
+        else:
 
-        processor = ColQwen2Processor.from_pretrained(model_name, cache_dir=cache_dir)
+            model_name = "vidore/colqwen2-v1.0"
+            cache_dir = "./models/colqwen2-v1.0"
+
+            # model_name = "tsystems/colqwen2-2b-v1.0"
+            # cache_dir = "./models/colqwen2-2b-v1.0"
+
+            model = ColQwen2.from_pretrained(
+                model_name,
+                cache_dir=cache_dir,
+                torch_dtype=torch.bfloat16,
+                device_map=device,
+                attn_implementation="flash_attention_2" if is_flash_attn_2_available() else None,
+            ).eval()
+
+            if checkpoint_path is not None:
+                checkpoint = torch.load(checkpoint_path, map_location=device)
+                if "model_state_dict" in checkpoint:
+                    model.load_state_dict(checkpoint["model_state_dict"])
+                else:
+                    model.load_state_dict(checkpoint)
+                print(f"Loaded checkpoint from {checkpoint_path}")
+
+            processor = ColQwen2Processor.from_pretrained(model_name, cache_dir=cache_dir)
+
         return model, processor
 
     # if model_type == "qwen2.5":
@@ -118,17 +139,36 @@ def create_model(model_type="qwen"):
     #     return model, processor
 
     if model_type == "colSmol":
-        model_name = "vidore/colSmol-500M"
-        cache_dir = "./models/colSmol-500M"
+        if checkpoint_model:
+            print(checkpoint_model)
+            model = ColIdefics3.from_pretrained(
+                checkpoint_model,
+                torch_dtype=torch.bfloat16,
+                device_map=device,
+                attn_implementation="flash_attention_2" if is_flash_attn_2_available() else None,
+            ).eval()
 
-        model = ColIdefics3.from_pretrained(
-            model_name,
-            cache_dir=cache_dir,
-            torch_dtype=torch.bfloat16,
-            device_map=device,
-            attn_implementation="flash_attention_2" if is_flash_attn_2_available() else None,
-        ).eval()
-        processor = ColIdefics3Processor.from_pretrained(model_name)
+            processor = ColIdefics3Processor.from_pretrained(checkpoint_model)
+        else:
+            model_name = "vidore/colSmol-500M"
+            cache_dir = "./models/colSmol-500M"
+
+            model = ColIdefics3.from_pretrained(
+                model_name,
+                cache_dir=cache_dir,
+                torch_dtype=torch.bfloat16,
+                device_map=device,
+                attn_implementation="flash_attention_2" if is_flash_attn_2_available() else None,
+            ).eval()
+            processor = ColIdefics3Processor.from_pretrained(model_name)
+
+            if checkpoint_path is not None:
+                checkpoint = torch.load(checkpoint_path, map_location=device)
+                if "model_state_dict" in checkpoint:
+                    model.load_state_dict(checkpoint["model_state_dict"])
+                else:
+                    model.load_state_dict(checkpoint)
+                print(f"Loaded checkpoint from {checkpoint_path}")
 
         return model, processor
 
